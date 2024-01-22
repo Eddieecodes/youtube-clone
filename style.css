@@ -6,7 +6,7 @@ body{
 }
 #grid-div{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr) ;
     grid-auto-columns: minmax(200px, auto);
     grid-auto-rows: minmax(50px, auto);
     gap: 20px;
@@ -38,12 +38,41 @@ nav{
     grid-template-columns: repeat(3, 1fr);
 }
 aside{
-    background-color: orange;
+    
     /*height: 960px;
     width: 220px;*/
-    grid-area: aside;
+    grid-area: aside; 
+    display: grid;
+    grid-auto-rows: 40px;
+   overflow-y: scroll;
+   cursor: pointer;
     
+}
+.home-div{
+    display: grid;
+    grid-template-columns: 60px 90px;
+    justify-content: center;
+    align-content: center;
+}
+#home-div-child{
+    width: 25px;
+    height: 25px;
     
+}
+#home-image{
+    width: 100%;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+#hr-tag{
+    transform: rotate(90deg);
+}
+h4{
+    font-weight: bold;
+    align-self: center;
+    margin-left: 27px;
 }
 main{
     
@@ -82,31 +111,6 @@ section{
     height: 30px;
     border-radius: 10px;
     border: 2px solid grey;
-}
-#home{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-    background-color: red;
-    border-radius: 5px;
-}
-#home:hover{
-    background-color: grey;
-}
-#icon-container{
-    
-    height: 25px;
-    justify-self: end;
-}
-#home-icon{
-    width: 30px;
-    height: 23px;
-    
-}
-#home-container{
-    text-align: center;
-    justify-self: start;
-    align-self: center;
 }
 
 .flex-item{
