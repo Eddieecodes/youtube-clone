@@ -28,6 +28,13 @@ body{
     "aside section section section"
     "aside section section section"
     "aside section section section"
+    "aside section section section"
+    "aside section section section"
+    "aside section section section"
+    "aside section section section"
+    "aside section section section"
+    "aside section section section"
+    "aside section section section"
     ;
 }
 nav{
@@ -50,9 +57,12 @@ aside{
 }
 .home-div{
     display: grid;
-    grid-template-columns: 60px 90px;
+    grid-template-columns: 50px 120px;
     justify-content: center;
     align-content: center;
+}
+.home-div:hover{
+    background-color: grey;
 }
 #home-div-child{
     width: 25px;
@@ -61,6 +71,9 @@ aside{
 }
 #home-image{
     width: 100%;
+}
+#abbrv-txt{
+    overflow: hidden;
 }
 h3{
     margin: 0;
@@ -72,7 +85,10 @@ h3{
 h4{
     font-weight: bold;
     align-self: center;
-    margin-left: 27px;
+    font-size: larger;
+    margin: 0px 0px 0px 37px;
+    color: red;
+    
 }
 main{
     
@@ -83,7 +99,7 @@ main{
     display:flex;
     flex-wrap: wrap;
     gap: 30px;
-    
+    flex-grow: 1;
     
 }
 section{
@@ -126,11 +142,23 @@ section{
     width: 100%;
     border-radius: 15px;
 }
+.kamoro-txt{
+    width: 200px;
+    height: 40px;
+    overflow-x: hidden;
+}
 
 #pedro-dp{
     width: 100%;
     border-radius: 50px;
+    
 }
+.pedro-txt{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 #img-txt-div{
     display: grid;
     grid-template-columns: 20% 80%;
@@ -168,9 +196,12 @@ p{
 }
 .section-div{
     display: flex;
-   flex-wrap: wrap;
-    column-gap: 10px;
+   overflow-x: auto;
+    gap: 10px;
 }
+.section-div::-webkit-scrollbar { /*i didnt really understand this though*/
+    display: none;
+  }
 .section-div-item{
     width: 220px;
     border-radius: 10px;
