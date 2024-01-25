@@ -4,13 +4,30 @@ body{
     background-color: black;
     color: white;
 }
+h3{
+    margin: 0;
+    padding: 0;
+}
+h4{
+    font-weight: bold;
+    align-self: center;
+    font-size: larger;
+    margin: 0px 0px 0px 40px;
+    color: whitesmoke;
+}
+p{
+    margin: 0;
+    padding: 0;
+    color: grey;
+}
+/*the whole layout of the page*/
 #grid-div{
     display: grid;
     grid-template-columns: repeat(4,1fr) ;
     grid-auto-columns: minmax(200px, auto);
     grid-auto-rows: minmax(50px, auto);
     gap: 20px;
-    grid-template-areas: 
+    grid-template-areas: /*grid template area used for the layouting */
     "nav nav nav nav"
     "aside main main main"
     "aside main main main"
@@ -29,27 +46,40 @@ body{
     "aside section section section"
     "aside section section section"
     "aside section section section"
-    
-    
     ;
 }
+/*the navgiation bar is given a display grid*/
 nav{
-    
     /*grid-column: 1/6;*/
-    grid-area: nav;
+    grid-area: nav;/*given a grid area name of nav*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+#logo-container{
+    width: 80px;
+    height: auto;
+    margin-left: 60px;
+}
+#logo{
+    width: 100%;
+}
+#search-container{  
+    align-self: center;
+}
+#search{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
 aside{
-    
     /*height: 960px;
     width: 220px;*/
     grid-area: aside; 
-    display: grid;
+    display: grid;/*also used grid for the aside bar*/
     grid-auto-rows: 40px;
-   overflow-y: scroll;
-   cursor: pointer;
-    
+   /* overflow-y: scroll; for creating the scroll effect*/
+    cursor: pointer;  
 }
 .home-div{
     display: grid;
@@ -60,131 +90,67 @@ aside{
 .home-div:hover{
     background-color: grey;
 }
-#home-div-child{
+.home-div-child{
     width: 25px;
-    height: 25px;
-    
+    height: 25px;   
 }
-#home-image{
+.home-image{
     width: 100%;
 }
+/*
 #abbrv-txt{
     overflow: hidden;
-}
-h3{
-    margin: 0;
-    padding: 0;
-}
-#hr-tag{
-    transform: rotate(90deg);
-}
-h4{
-    font-weight: bold;
-    align-self: center;
-    font-size: larger;
-    margin: 0px 0px 0px 37px;
-    color: red;
-    
-}
-main{
-    
-    /*grid-column: 2/6;
-    height: 600px;*/
+} */
+
+main{ 
     grid-area: main;
-    /*width: 1055px*/
-    
-    
-    
-}
-main{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    
+    gap: 30px;  
 }
-section{
-   
-   /* grid-column: 2/6;
-    height: 360px;
-    grid-row: 4/5;*/
-    grid-area: section;
-}
-#logo-container{
-    
-    width: 80px;
-    height: auto;
-    margin-left: 60px;
-}
-#logo{
-    width: 100%;
-}
-#search-container{
-    
-    align-self: center;
-}
-#search{
-    width: 100%;
-    height: 30px;
-    border-radius: 10px;
-    border: 2px solid grey;
-}
-
 .flex-item{
     width: 290px;
     flex-grow: 1;
 }
-.img-div{
-    width: 100%;
-    
-    border-radius: 15px;
-}
-#kamaro{
+.kamaro{
     width: 100%;
     border-radius: 15px;
 }
-.kamoro-txt{
-    width: 200px;
-    height: 40px;
-    overflow-x: hidden;
+.img-txt-div{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    column-gap: 10px;
+    grid-auto-rows: 40px;
 }
-
-#pedro-dp{
+.pedro-dp{
     width: 100%;
     border-radius: 50px;
-    
 }
 .pedro-txt{
     overflow: hidden;
     white-space: nowrap;/*truncation*/
     text-overflow: ellipsis;
 }
-
-#img-txt-div{
+.p-txt{
+    grid-column: 2/3;   
+}
+.img-txt-kam{
     display: grid;
     grid-template-columns: 20% 80%;
     column-gap: 10px;
     grid-auto-rows: 40px;
+}
+.img-div{
+    width: 100%;
+    border-radius: 15px;
 }
 abbr{
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
 }
-
-#img-txt-kam{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    column-gap: 10px;
-    grid-auto-rows: 40px;
-}
-#p-txt{
-    grid-column: 2/3;
-    
-}
-p{
-    margin: 0;
-    padding: 0;
-    color: grey;
+section{
+    grid-area: section;
 }
 #short-div-logo{
     width: 60px;
@@ -199,23 +165,36 @@ p{
    overflow-x: auto;
     gap: 10px;
 }
-.section-div::-webkit-scrollbar { /*i didnt really understand this though*/
+.section-div::-webkit-scrollbar { 
     display: none;
-  }
+}
 .section-div-item{
     width: 220px;
     border-radius: 10px;
 }
-.section-image{
-    width: 220px;   
-}
-#css-short{
+.css-short{
     width: 100%;
     border-radius: 10px;
 }
-#txt-div-section{
+.p-txt-section{
     margin-top: 10px;
 }
-#p-txt-section{
-    margin-top: 20px;
+/*
+.section-image{
+    width: 220px;   
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
