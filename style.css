@@ -29,12 +29,8 @@ body{
     "aside section section section"
     "aside section section section"
     "aside section section section"
-    "aside section section section"
-    "aside section section section"
-    "aside section section section"
-    "aside section section section"
-    "aside section section section"
-    "aside section section section"
+    
+    
     ;
 }
 nav{
@@ -96,10 +92,14 @@ main{
     height: 600px;*/
     grid-area: main;
     /*width: 1055px*/
-    display:flex;
+    
+    
+    
+}
+main{
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-grow: 1;
     
 }
 section{
@@ -131,7 +131,7 @@ section{
 
 .flex-item{
     width: 290px;
-    
+    flex-grow: 1;
 }
 .img-div{
     width: 100%;
@@ -155,7 +155,7 @@ section{
 }
 .pedro-txt{
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap;/*truncation*/
     text-overflow: ellipsis;
 }
 
